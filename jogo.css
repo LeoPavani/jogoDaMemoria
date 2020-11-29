@@ -1,0 +1,65 @@
+.jogo{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.carta{
+  display: flex;
+  width: 15%;
+  height: 30vh;
+  border: 3px solid gray;
+  border-radius: 15%;
+  margin: 5px 0;
+  transition: 0.5s all;
+}
+
+.carta:hover{
+  cursor: pointer;
+  opacity: 70%;
+}
+
+.carta:active{
+  transform: scale(0.9);
+}
+
+.primeiroPar{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-Play.png);
+}
+
+.segundoPar{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-MotorHorário.png);
+}
+
+.terceiroPar{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-MotorAntiHorário.png);
+}
+
+.quartoPar{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-Stop.png);
+}
+
+.quintoPar{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-PotênciaDoMotor.png);
+}
+
+.sextoPar{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-Esperar.png);
+}
+
+.setimoPar{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-DesligarMotor.png);
+}
+
+.oitavoPar{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-Loop.png);
+}
+
+.nonoPar{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-SensorDeInclinaçãoPlano.png);
+}
+
+.verso{
+  background: no-repeat center/80% url(./imgs/robozinhoIP.png);
+}
