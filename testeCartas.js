@@ -42,25 +42,8 @@ function shuffle(array) {
 const body = document.querySelector("body");
 body.innerHTML = 
 `
-<div class="jogo">
-${embaralhado[0]}
-${embaralhado[1]}
-${embaralhado[2]}
-${embaralhado[3]}
-      ${embaralhado[4]}
-      ${embaralhado[5]}
-      ${embaralhado[6]}
-      ${embaralhado[7]}
-      ${embaralhado[8]}
-      ${embaralhado[9]}
-      ${embaralhado[10]}
-      ${embaralhado[11]}
-      ${embaralhado[12]}
-      ${embaralhado[13]}
-      ${embaralhado[14]}
-      ${embaralhado[15]}
-      ${embaralhado[16]}
-      ${embaralhado[17]}
-    </div>
+  <div class="jogo">
+    ${embaralhado[0]}${embaralhado[1]}${embaralhado[2]}${embaralhado[3]}${embaralhado[4]}${embaralhado[5]}${embaralhado[6]}${embaralhado[7]}${embaralhado[8]}${embaralhado[9]}${embaralhado[10]}${embaralhado[11]}${embaralhado[12]}${embaralhado[13]}${embaralhado[14]}${embaralhado[15]}${embaralhado[16]}${embaralhado[17]}
+      </div>
   `
 ;

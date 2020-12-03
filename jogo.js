@@ -5,29 +5,38 @@ let elementosClicados = [];
 let contador = 0;
 let primeiroId = 0;
 let segundoId = 0;
+let pontos = 0;
+
+
 elemento.addEventListener("click", function(event){
   event.preventDefault();
   const clicado = event.target;
   segundoId = clicado.id
-
+  
+  const virado = clicado.className;
+  
+  
+  
   //verifica se os IDs são diferentes 
   //e se o objeto clicado possui um id
   //(para o fundo não ser clicável)
-  if (segundoId != primeiroId && clicado.id){
+  if (virado.indexOf('verso') !== -1 && clicado.id){
     viraCarta(clicado);
     colocaNoVetorDeVerificacao(clicado);
     
     if (contador > 0){
-      verificaDupla(elementosClicados, clicado); 
+      verificaDupla(elementosClicados, clicado);
+      verificaVitoria();
+
     }
     
     
     
     contador ++;
   }
-  console.log(primeiroId, segundoId);
+  
   primeiroId = clicado.id;
-  console.log(primeiroId, segundoId);
+  
   
 });
 
@@ -37,11 +46,12 @@ elemento.addEventListener("click", function(event){
 //a carta antes de dar o resultado. 
 function verificaDupla(){
   if(elementosClicados[0] === elementosClicados[1]){
+    pontos ++;
     setTimeout(() => {
-      alert("Você acertou!");
+      alert("Parabéns!");
     }, 600);
   }else{
-    digaBomDia();
+    voltaCarta();
     setTimeout(() => {
       alert("Tente novamente!");
     }, 600);
@@ -60,7 +70,7 @@ function colocaNoVetorDeVerificacao(clicado){
   elementosClicados.push(classeElementoClicado);
 } 
 
-function digaBomDia(){
+function voltaCarta(){
   const primeiro = document.getElementById(primeiroId);
   const segundo = document.getElementById(segundoId);
 
@@ -72,6 +82,14 @@ function digaBomDia(){
 
 }
 
+function verificaVitoria(){
 
-
-// && (elementosClicados[0].id != elementosClicados[1].id)
+  if(pontos == 9){
+    setTimeout(() => {
+      alert("VOCÊ GANHOU!!!! UHUUUUUUUUL!!!!  PARABÉNS!!!!!!!");
+    }, 1000);
+  }else{
+    console.log("Ainda não...")
+  }
+  
+}
