@@ -3,6 +3,7 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  background-color: white;
 }
 
 .carta{
@@ -62,4 +63,26 @@
 
 .verso{
   background: no-repeat center/80% url(./imgs/robozinhoIP.png);
+}
+
+#modal{
+  position: absolute;
+  display: block;
+  top: 100px;
+  text-align: center;
+
+}
+
+.modal-title.alinhaNoCentro{
+  margin-left: auto;
+  padding-left: 5%;
+}
+
+.modal-footer.containerBotoes{
+  display: flex;
+  justify-content: space-around;
+}
+
+.escondeModal{
+  z-index: -10000 !important;
 }

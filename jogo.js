@@ -1,5 +1,6 @@
 const elemento = document.querySelector(".jogo");
-
+const elemParaModal = document.querySelector("#modal");
+// console.log(elemParaModal.className)
 
 let elementosClicados = [];
 let contador = 0;
@@ -27,7 +28,7 @@ elemento.addEventListener("click", function(event){
     if (contador > 0){
       verificaDupla(elementosClicados, clicado);
       verificaVitoria();
-
+      
     }
     
     
@@ -47,14 +48,8 @@ elemento.addEventListener("click", function(event){
 function verificaDupla(){
   if(elementosClicados[0] === elementosClicados[1]){
     pontos ++;
-    setTimeout(() => {
-      alert("Parabéns!");
-    }, 600);
   }else{
     voltaCarta();
-    setTimeout(() => {
-      alert("Tente novamente!");
-    }, 600);
   }
   elementosClicados = [];
   contador = -1;
@@ -73,23 +68,29 @@ function colocaNoVetorDeVerificacao(clicado){
 function voltaCarta(){
   const primeiro = document.getElementById(primeiroId);
   const segundo = document.getElementById(segundoId);
-
+  
   setTimeout(() => {
     primeiro.classList.toggle("verso");
     segundo.classList.toggle("verso");
-  }, 600);
+  }, 1500);
   
-
+  
 }
 
 function verificaVitoria(){
-
+  
   if(pontos == 9){
     setTimeout(() => {
-      alert("VOCÊ GANHOU!!!! UHUUUUUUUUL!!!!  PARABÉNS!!!!!!!");
-    }, 1000);
+      colocaModalVitoria(elemParaModal);
+    }, 2000);
   }else{
     console.log("Ainda não...")
   }
   
 }
+
+
+function colocaModalVitoria(elemParaModal){
+  elemParaModal.classList.remove("escondeModal");
+};
+
