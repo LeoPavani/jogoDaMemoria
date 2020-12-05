@@ -18,7 +18,16 @@ const carta17 = `<div class="carta nonoPar verso" id="17"></div>`;
 const carta18 = `<div class="carta nonoPar verso" id="18"></div>`;
 
 const arrayDeCartas = [carta1, carta2, carta3, carta4, carta5, carta6, carta7, carta8, carta9, carta10, carta11, carta12, carta13, carta14, carta15, carta16, carta17, carta18 ];
-const embaralhado = shuffle(arrayDeCartas);
+const arrayTeste = [carta1, carta2, carta3, carta4, carta5, carta6];
+const embaralhadoTeste = shuffle(arrayTeste);
+const embaralhadoOficial = shuffle(arrayDeCartas);
+const body = document.querySelector(".game");
+const teste = `${embaralhadoTeste[0]}${embaralhadoTeste[1]}${embaralhadoTeste[2]}${embaralhadoTeste[3]}${embaralhadoTeste[4]}${embaralhadoTeste[5]}`;
+const realOficial = `${embaralhadoOficial[0]}${embaralhadoOficial[1]}${embaralhadoOficial[2]}${embaralhadoOficial[3]}${embaralhadoOficial[4]}${embaralhadoOficial[5]}${embaralhadoOficial[6]}${embaralhadoOficial[7]}${embaralhadoOficial[8]}${embaralhadoOficial[9]}${embaralhadoOficial[10]}${embaralhadoOficial[11]}${embaralhadoOficial[12]}${embaralhadoOficial[13]}${embaralhadoOficial[14]}${embaralhadoOficial[15]}${embaralhadoOficial[16]}${embaralhadoOficial[17]}`;
+
+embaralhaCartas(body, embaralhadoTeste, embaralhadoOficial);
+
+
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
   
@@ -38,12 +47,12 @@ function shuffle(array) {
   return array;
 }
 
-
-const body = document.querySelector(".game");
-body.innerHTML = 
-`
-  <div class="jogo">
-    ${embaralhado[0]}${embaralhado[1]}${embaralhado[2]}${embaralhado[3]}${embaralhado[4]}${embaralhado[5]}${embaralhado[6]}${embaralhado[7]}${embaralhado[8]}${embaralhado[9]}${embaralhado[10]}${embaralhado[11]}${embaralhado[12]}${embaralhado[13]}${embaralhado[14]}${embaralhado[15]}${embaralhado[16]}${embaralhado[17]}
+function embaralhaCartas(){
+  body.innerHTML = 
+    `
+      <div class="jogo">
+        ${realOficial}
       </div>
-  `
-;
+    `
+  ;
+}

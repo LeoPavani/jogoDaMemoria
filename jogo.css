@@ -4,6 +4,7 @@
   align-items: center;
   flex-wrap: wrap;
   background-color: white;
+  margin-top: 18px;
 }
 
 .carta{
@@ -68,9 +69,12 @@
 #modal{
   position: absolute;
   display: block;
-  top: 100px;
   text-align: center;
 
+}
+
+#caixaDaMensagem{
+  top: 130px;
 }
 
 .modal-title.alinhaNoCentro{
