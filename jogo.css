@@ -1,6 +1,5 @@
 html{
-  /* background-color: rgb(19, 9, 61); */
-
+  background-color:  rgb(209, 209, 209);
 }
 
 .jogo{
@@ -10,7 +9,7 @@ html{
   flex-wrap: wrap;
   background-color: white;
   padding: 22px 0;
-  /* background-color:  rgb(19, 9, 61); */
+  background-color:  rgb(209, 209, 209);
 }
 
 .carta{
@@ -70,7 +69,6 @@ html{
 
 .verso{
   background: no-repeat center/140% url(./imgs/robozinhoIP.jpg);
-  background-image: ;
 }
 
 #modal{
