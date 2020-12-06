@@ -1,5 +1,6 @@
 const elemento = document.querySelector(".jogo");
 const elemParaModal = document.querySelector("#modal");
+const telaNaoClicavel = document.querySelector("#tela");
 
 let elementosClicados = [];
 let cartasClicadasPorRodada = 0;
@@ -9,6 +10,7 @@ let pontos = 0;
 const numeroDePares = defineNumeroDePares();
 const tempoAntesDaCartaErradaVirarDeVolta = 1500;
 const tempoParaAparecerMensagemVitoria = 800;
+const tempoNaoClicavel = 1600;
 
 
 elemento.addEventListener("click", function(event){
@@ -18,7 +20,7 @@ elemento.addEventListener("click", function(event){
   segundoId = clicado.id
   const virado = clicado.className;
   
-  verificaSeIdDasCartasSaoDiferentes(virado, clicado)
+  verificaSePodeMostrarCarta(virado, clicado)
     
   primeiroId = clicado.id;
 });
@@ -29,6 +31,10 @@ function verificaDupla(){
   if(elementosClicados[0] === elementosClicados[1]){
     pontos ++;
   }else{
+    invalidaCliques();
+    setTimeout(() => {
+      validaCliques();
+    }, tempoNaoClicavel);
     voltaCarta();
   }
   elementosClicados = [];
@@ -71,18 +77,18 @@ function colocaModalVitoria(elemParaModal){
   elemParaModal.classList.remove("escondeModal");
 };
 
-function verificaSeDuasCartasForamClicadas(cartasClicadasPorRodada, clicado){
-  if (cartasClicadasPorRodada > 0){
+function fazValidacoes(cartasClicadasPorRodada, clicado){
+  if (verificaSeUmaDuplaJaFoiClicada(cartasClicadasPorRodada)){
     verificaDupla(elementosClicados, clicado);
     verificaVitoria(numeroDePares);
   }
 }
 
-function verificaSeIdDasCartasSaoDiferentes(virado, clicado){
+function verificaSePodeMostrarCarta(virado, clicado){
   if (seCartaEstaViradaParaBaixo(virado) && clicado.id){
     viraCarta(clicado);
     colocaNoVetorDeVerificacao(clicado);
-    verificaSeDuasCartasForamClicadas(cartasClicadasPorRodada, clicado);
+    fazValidacoes(cartasClicadasPorRodada, clicado);
     cartasClicadasPorRodada ++;
   }
 }
@@ -102,6 +108,18 @@ const numeroDeCartas = elemento.childNodes.length - 2;
   return numeroDosPares;
 }; 
 
+function verificaSeUmaDuplaJaFoiClicada(cartasClicadasPorRodada){
+  if (cartasClicadasPorRodada > 0){
+    return true;
+  } else{
+    return false;
+  }
+}
 
+function invalidaCliques(){
+  telaNaoClicavel.classList.add("naoClicavel");
+}
 
-
+function validaCliques(){
+  telaNaoClicavel.classList.remove("naoClicavel");
+}

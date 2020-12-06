@@ -15,10 +15,7 @@
     <div class="modal-dialog">
       <div class="modal-content" id="caixaDaMensagem">
         <div class="modal-header">
-          <h3 class="modal-title alinhaNoCentro">Parabéns!</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h2 class="modal-title alinhaNoCentro">Parabéns!</h2>
         </div>
         <div class="modal-body">
           <p>Uau!! Você já conhece boa parte dos blocos de 
@@ -28,14 +25,16 @@
           <h4>Continue assim!</h4>
         </div>
         <div class="modal-footer containerBotoes">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Jogar novamente</button>
-          <button type="button" class="btn btn-primary">Procurar outro jogo</button>
+          <button type="button" class="btn btn-secondary" id="jogarNovamente" onclick="recarregaPagina()" data-dismiss="modal">Jogar novamente</button>
+          <a href="index.html"><button type="button" class="btn btn-primary" id="outroJogo" >Procurar outro jogo</button></a>
         </div>
       </div>
     </div>  
   </div>
+  <div class="" id="tela"></div>
   <script src="./testeCartas.js"></script>
   <script src="jogo.js"></script>
+  <script src="modal.js"></script>
 </body>
 </html>
 

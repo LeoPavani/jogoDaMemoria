@@ -1,10 +1,16 @@
+html{
+  background-color: rgb(19, 9, 61);
+
+}
+
 .jogo{
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   background-color: white;
-  margin-top: 18px;
+  padding: 22px 0;
+  background-color: rgb(19, 9, 61);
 }
 
 .carta{
@@ -77,9 +83,8 @@
   top: 130px;
 }
 
-.modal-title.alinhaNoCentro{
-  margin-left: auto;
-  padding-left: 5%;
+h2.modal-title.alinhaNoCentro{
+  margin: auto;
 }
 
 .modal-footer.containerBotoes{
@@ -89,4 +94,18 @@
 
 .escondeModal{
   z-index: -10000 !important;
+}
+
+#tela {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background-color: rgba(1, 1, 1, 0);
+  z-index: -9999;
+}
+
+#tela.naoClicavel{
+  z-index: 99999;
 }
