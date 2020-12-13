@@ -18,8 +18,8 @@ html{
   height: 30vh;
   border: 3px solid black;
   border-radius: 15%;
-  margin: 5px 0;
-  transition: 0.5s all;
+  margin: 4px 0;
+  /* transition: 0.5s all; */
 }
 
 .carta:hover{
