@@ -10,8 +10,8 @@ let pontos = 0;
 const numeroDePares = defineNumeroDePares();
 const tempoAntesDaCartaErradaVirarDeVolta = 2000;
 const tempoParaAparecerMensagemVitoria = 800;
-const tempoNaoClicavel = 1600;
-const tempoParaVirarACarta = 300;
+const tempoNaoClicavel = 2000;
+const tempoParaVirarACarta = 200;
 const escalaInteira = "scale(1)";
 const escalaEnquantoCartaVira = "scale(0.1, 1)";
 
@@ -39,7 +39,7 @@ function animaACartaVirando(carta){
         carta.style.transform = escalaInteira;
 
       }, tempoParaVirarACarta);
-  }, (tempoParaVirarACarta - 10));
+  }, (tempoParaVirarACarta - 30));
 }
 
 function colocaModalVitoria(elemParaModal){
@@ -60,12 +60,12 @@ function defineNumeroDePares(){
 }
 
 function desviraCarta(){
-  
   const primeiro = document.getElementById(primeiroId);
   const segundo = document.getElementById(segundoId);
   
   setTimeout(() => {
     animaACartaVirando(primeiro);
+    tocarSomDesvirando();
     animaACartaVirando(segundo);
   }, tempoAntesDaCartaErradaVirarDeVolta);
 
@@ -90,6 +90,30 @@ function seCartaEstaViradaParaBaixo(virado){
   }
 } 
 
+function tocarSomDeAcerto(){
+  var audioAcertou = new Audio();
+  audioAcertou.src = "success.wav";
+  audioAcertou.play();
+}
+
+function tocarSomDesvirando(){
+  var audio2 = new Audio();
+  audio2.src = "desviraCartaSom.wav";
+  audio2.play();
+}
+
+function tocarSomVirando(){
+  var audio1 = new Audio();
+  audio1.src = "viraCartaSom.wav";
+  audio1.play();
+}
+
+function tocarSomVitoria(){
+  var audioVitoria = new Audio();
+  audioVitoria.src = "vitoria.wav";
+  audioVitoria.play();
+}
+
 function trocaClasseVerso(alvo){
   alvo.classList.toggle("verso");
 }
@@ -101,6 +125,9 @@ function validaCliques(){
 function verificaDupla(){
   //verifica as classes (se for igual, a imagem também será)...
   if(elementosClicados[0] === elementosClicados[1]){
+    setTimeout(() => {
+      tocarSomDeAcerto();
+    }, tempoParaVirarACarta * 3);
     pontos ++;
   }else{
     invalidaCliques();
@@ -133,6 +160,7 @@ function verificaSeUmaDuplaJaFoiClicada(cartasClicadasPorRodada){
 function verificaVitoria(numeroDePares){
   if(pontos == numeroDePares){
     setTimeout(() => {
+      tocarSomVitoria();
       colocaModalVitoria(elemParaModal);
     }, tempoParaAparecerMensagemVitoria);
   }else{
@@ -142,4 +170,5 @@ function verificaVitoria(numeroDePares){
 
 function viraCarta(clicado){
   animaACartaVirando(clicado);
+  tocarSomVirando();
 }

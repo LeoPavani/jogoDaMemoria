@@ -1,0 +1,83 @@
+.carta{
+  justify-content: center;
+  padding: 70px 0;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 30px;
+}
+
+#um{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-Play.png);
+}
+
+/* #dois{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-Play.png);
+} */
+
+#tres{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-MotorHorário.png);
+}
+
+/* #quatro{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-MotorHorário.png);
+} */
+
+#cinco{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-MotorAntiHorário.png);
+}
+
+/* #seis{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-MotorAntiHorário.png);
+} */
+
+#sete{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-Stop.png);
+}
+
+/* #oito{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-Stop.png);
+} */
+
+#nove{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-PotênciaDoMotor.png);
+}
+
+/* #dez{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-PotênciaDoMotor.png);
+} */
+
+#onze{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-Esperar.png);
+}
+
+/* #doze{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-Esperar.png);
+} */
+
+#treze{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-DesligarMotor.png);
+}
+
+/* #catorze{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-DesligarMotor.png);
+} */
+
+#quinze{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-Loop.png);
+}
+
+/* #dezesseis{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-Loop.png);
+} */
+
+#dezessete{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-SensorDeInclinaçãoPlano.png);
+}
+
+/* #dezoito{
+  background: no-repeat center/100% url(./imgs/WeDo-Icons-SensorDeInclinaçãoPlano.png);
+} */
+
+.verso{
+  background: no-repeat center/140% url(./imgs/robozinhoIP.jpg) !important;
+}

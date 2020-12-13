@@ -1,0 +1,39 @@
+.primeiroPar{
+  background: no-repeat center/100% url(./laranja.png);
+}
+
+.segundoPar{
+  background: no-repeat center/100% url(./maca.png);
+}
+
+.terceiroPar{
+  background: no-repeat center/100% url(./manga.jpg);
+}
+
+.quartoPar{
+  background: no-repeat center/100% url(./maracuja.png);
+}
+
+.quintoPar{
+  background: no-repeat center/100% url(./melancia.png);
+}
+
+.sextoPar{
+  background: no-repeat center/100% url(./morango.png);
+}
+
+.setimoPar{
+  background: no-repeat center/100% url(./pera.jpg);
+}
+
+.oitavoPar{
+  background: no-repeat center/100% url(./uva.png);
+}
+
+.nonoPar{
+  background: no-repeat center/100% url(./banana.png);
+}
+
+.verso{
+  background: no-repeat center/140% url(./imgs/robozinhoIP.jpg);
+}

@@ -31,46 +31,6 @@ html{
   transform: scale(0.9);
 }
 
-.primeiroPar{
-  background: no-repeat center/100% url(./imgs/WeDo-Icons-Play.png);
-}
-
-.segundoPar{
-  background: no-repeat center/100% url(./imgs/WeDo-Icons-MotorHorário.png);
-}
-
-.terceiroPar{
-  background: no-repeat center/100% url(./imgs/WeDo-Icons-MotorAntiHorário.png);
-}
-
-.quartoPar{
-  background: no-repeat center/100% url(./imgs/WeDo-Icons-Stop.png);
-}
-
-.quintoPar{
-  background: no-repeat center/100% url(./imgs/WeDo-Icons-PotênciaDoMotor.png);
-}
-
-.sextoPar{
-  background: no-repeat center/100% url(./imgs/WeDo-Icons-Esperar.png);
-}
-
-.setimoPar{
-  background: no-repeat center/100% url(./imgs/WeDo-Icons-DesligarMotor.png);
-}
-
-.oitavoPar{
-  background: no-repeat center/100% url(./imgs/WeDo-Icons-Loop.png);
-}
-
-.nonoPar{
-  background: no-repeat center/100% url(./imgs/WeDo-Icons-SensorDeInclinaçãoPlano.png);
-}
-
-.verso{
-  background: no-repeat center/140% url(./imgs/robozinhoIP.jpg);
-}
-
 #modal{
   position: absolute;
   display: block;
